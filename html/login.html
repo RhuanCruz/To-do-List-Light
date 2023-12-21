@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
-    
-    
-    
+    <header>
+        <button class="btn tipo">Login</button>
+        <button class="btn tipo">Cadastrar-se</button>
+    </header>
+    <main>
+        <form action="/js/login.js">
+            <label class="lbl-user" for="user">Nome de Usuário</label>
+            <input type="text" name="user" id="user">
+            <label class="lbl-senha" for="senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+            <p>es</p>
+            <button class="entrar" type="submit" id="entrar">Entrar</button>
+        </form>
+    </main>
+    <footer>
+        @rhuancruz.dev
+    </footer>
     
     <script type="module" src="/js/login.js"></script>
 </body>
