@@ -33,7 +33,7 @@ main{
 }
 
 
-form{
+.form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,26 +45,54 @@ form{
     background: rgba(245, 245, 245, 0.342);
     border-radius: 18px;
     box-shadow: 5px 5px 10px rgb(116, 114, 114);
+    gap: 10px;
+}
 
-    gap: 20px;
+form.cadastro{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: min-content;
+    min-height: min-content;
+    height: 300px;
+    width: 300px;
+    background: rgba(245, 245, 245, 0.342);
+    border-radius: 18px;
+    box-shadow: 5px 5px 10px rgb(116, 114, 114);
+    gap: 5px;
+}
+
+a{
+    
+}
+
+.esqueci-senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 11px;
 }
 
 label{
     color: rgb(143, 81, 0);
 }
 
-input{
+input.txt{
     background: rgba(196, 196, 196, 0.322);
     border-radius: 3px;
     border: transparent;
-    transition: 5s ease-in-out;
+    transition: ease-in-out;
     transition-delay: 2s;
+    transition-duration: 2s;
+    animation-duration: 2s;
 }
 
-input:hover{
+input.txt:hover{
     background: rgba(240, 240, 240, 0.568);
     height: 30px;
-    width: 200px;
+    width: 230px;
 }
 
 
@@ -81,7 +109,32 @@ button.entrar{
     min-width: min-content;
     min-height: min-content;
     border-radius: 5px;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition: ease-in-out;
+    cursor: pointer;
     background: rgba(255, 174, 0, 0.788);
+}
+
+button.cadastrar{
+    height: 40px;
+    width: 100px;
+    min-width: min-content;
+    min-height: min-content;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: rgba(255, 174, 0, 0.788);
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition: ease-in-out;
+    cursor: pointer;
+}
+.entrar:hover{
+    width: 110px;
+}
+
+.cadastrar:hover{
+    width: 120px;
 }
 
 .btn{
@@ -107,7 +160,8 @@ cursor: pointer;
     position: absolute;
     background:  rgba(255, 174, 0, 0.788);
     z-index: -1;
-    transition: all .5s;
+    transition: all .3s ease-in-out;
+    transition-delay: .1s;
     
 }
 .tipo::before{

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <button id="modoLogin" class="btn tipo">Login</button>
+        <button id="modoCadastrar" class="btn tipo">Cadastrar-se</button>
+    </header>
+    <main>
+        <form id="FormularioDeLogin"class="form login" >
+            <label class="lbl-user" for="user">Nome de Usuário</label>
+            <input class="txt" type="text" name="user"  id="user">
+            <label class="lbl-senha" for="senha">Senha</label>
+            <input class="txt"  type="password" name="senha" id="senha">
+            <div class="esqueci-senha"><input type="checkbox"><a href=""><p>Esqueci a senha!</p></a></div>
+            <button class="entrar" type="button" id="entrar">Entrar</button>
+        </form>
+        <form id="FormularioDeCadastro" class="form cadastro" >
+            <label class="lbl-email" for="C-email">Digite um e-mail</label>
+            <input class="txt" type="email" name="email" id="C-email">
+            <label class="lbl-user" for="C-user">Escolha um nome de Usuário</label>
+            <input class="txt" type="text" name="user" id="C-user">
+            <label class="lbl-senha" for="C-senha" > Defina uma Senha</label>
+            <input class="txt" type="password"  name="" id="C-senha">
+            <label class="lbl-ConfirmaSenha" for="ConfirmaSenha" > Confirme a Senha</label>
+            <input class="txt" type="password" name="ConfirmaSenha" id="ConfirmaSenha">
+            <button class="cadastrar" type="button" id="btnCadastrar">Cadastrar</button>
+        </form>
+    </main>
+    <footer>
+        @rhuancruz.dev
+    </footer>
+    
+    <script type="module" src="/js/login.js"></script>
+</body>
+</html>
