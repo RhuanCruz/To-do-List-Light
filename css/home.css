@@ -39,10 +39,24 @@ section{
 }
 
 section.todas{
+    border-radius: 8px;
+    border: 1px solid rgba(255, 136, 0, 0.623);
+}
+
+.Todas{
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100%;
     min-width: 100%;
+    max-width: 80;
+    max-height: 0px;
+    border-radius: 8px;
+    gap: 5px;
+    flex-direction: column;
+    overflow: auto;
+    border: 1px solid rgba(255, 136, 0, 0.623);
+
 }
 
 .andamento{
@@ -73,13 +87,34 @@ div.altaPrioridade-A{
     grid-row: 1;
     grid-column: 1;
     min-height: 100%;
-    min-width: 100%;
+    min-width: 10%;
+    max-width: 80;
+    max-height: 0px;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
     background-color: rgb(255, 255, 255);
-    overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
+    overflow: auto;
     border: 2px solid #ff00004f;
+}
+.altaPrioridade-A::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.altaPrioridade-A::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.altaPrioridade-A::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.altaPrioridade-A::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
 }
 
 div.mediaPrioridade-A{
@@ -87,83 +122,216 @@ div.mediaPrioridade-A{
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    gap: 5px;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 1px solid #e7bf0a63;
 
 }
+
+.mediaPrioridade-A::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.mediaPrioridade-A::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.mediaPrioridade-A::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.mediaPrioridade-A::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
+}
+
 
 div.baixaPrioridade-A{
     grid-row: 3;
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    gap: 5px;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 1px solid #0059ff36;
 
 }
+.baixaPrioridade-A::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.baixaPrioridade-A::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.baixaPrioridade-A::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.baixaPrioridade-A::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
+}
+
 
 div.altaPrioridade-F{
     grid-row: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    gap: 5px;
     grid-column: 1;
     display: flex;
+    border-radius: 8px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 2px solid #ff00004f;
 
 }
+.altaPrioridade-F::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.altaPrioridade-F::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.altaPrioridade-F::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.altaPrioridade-F::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
+}
+
 
 div.mediaPrioridade-F{
     grid-row: 2;
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    border-radius: 8px;
+    gap: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 1px solid #e7bf0a63;
 
 }
 
+.mediaPrioridade-F::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.mediaPrioridade-F::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.mediaPrioridade-F::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.mediaPrioridade-F::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
+}
+
+
 div.baixaPrioridade-F{
     grid-row: 3;
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    border-radius: 8px;
+    gap: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 1px solid #0059ff36;
 
 }
+.baixaPrioridade-F::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.baixaPrioridade-F::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+     border-radius: 6px; /* Borda arredondada */
+}
+
+.baixaPrioridade-F::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.baixaPrioridade-F::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
+}
+
 
 div.altaPrioridade-C{
     grid-row: 1;
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    gap: 5px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 2px solid #ff00004f;
 
+}
+.altaPrioridade-C::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.altaPrioridade-C::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.altaPrioridade-C::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.altaPrioridade-C::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
 }
 
 div.mediaPrioridade-C{
@@ -171,13 +339,33 @@ div.mediaPrioridade-C{
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 1px solid #e7bf0a63;
 
+}
+.mediaPrioridade-C::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.mediaPrioridade-C::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.mediaPrioridade-C::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.mediaPrioridade-C::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
 }
 
 div.baixaPrioridade-C{
@@ -185,13 +373,34 @@ div.baixaPrioridade-C{
     grid-column: 1;
     min-height: 100%;
     min-width: 100%;
+    max-height: 0px;
+    gap: 5px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+overflow: auto;
     background-color: rgb(255, 255, 255);
     overflow: auto; /* Adiciona barra de rolagem quando o conteúdo ultrapassa as dimensões da div */
     border: 1px solid #0059ff36;
 
+}
+.baixaPrioridade-C::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.baixaPrioridade-C::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.baixaPrioridade-C::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.baixaPrioridade-C::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
 }
 
 .status{
@@ -251,4 +460,33 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+div.teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    min-width: min-content;
+    width: 80%;
+    background-color: whitesmoke;
+    border: 10px;
+    box-shadow: 5px 5px 10px rgba(122, 122, 122, 0.5);
+}
+
+.Todas::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar */
+}
+
+.Todas::-webkit-scrollbar-thumb {
+    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+.Todas::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+}
+
+.Todas::-webkit-scrollbar-thumb:hover {
+    background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
 }
