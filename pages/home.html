@@ -24,48 +24,76 @@
         </aside>
         
         <main>
-            
-        <section class="andamento">
-            <div class="altaPrioridade-A">
-                <div class="teste"><input type="checkbox">Trabalho</div>
+            <section class="andamento">
+                <div class="altaPrioridade-A">
+                <div class="btnADD"><img src="/img/imgIconAdd.svg" alt="add"></div>
+                <div class="itens">
+                    <div class="teste"><input type="checkbox">Trabalho </div>
+                </div>
             </div>
             <div class="mediaPrioridade-A">
-                <div class="teste"><input type="checkbox">Trabalho</div>
-            
             </div>
             <div class="baixaPrioridade-A">
-                <div class="teste"><input type="checkbox">Trabalho</div>
-            
         </section>
         <section class="fazer">
             <div class="altaPrioridade-F">
-                <div class="teste"><input type="checkbox">Trabalho</div>
             </div>
             <div class="mediaPrioridade-F">
-                <div class="teste"><input type="checkbox">Trabalho</div>
             </div>
             <div class="baixaPrioridade-F">
-                <div class="teste"><input type="checkbox">Trabalho</div>
+
             </div>
 
         </section>
         <section class="concluidas">
             <div class="altaPrioridade-C">
-                <div class="teste"><input type="checkbox">Trabalho</div>
+
             </div>
             <div class="mediaPrioridade-C">
-                <div class="teste"><input type="checkbox">Trabalho</div>
             </div>
             <div class="baixaPrioridade-C">
-                <div class="teste"><input type="checkbox">Trabalho</div>
             </div>
         </section>
         <section class="todas">
-            <div class="Todas">
-                <div class="teste"><input type="checkbox">Trabalho</div>
-            </div>
         </section>
     </main>
+    <div class="janela-modal" id="janela-modal">
+        <div class="modal">
+            <h1>Criar Tarefa</h1>
+            <div class="form-nome">
+                <input type="text" required=""/>
+                <label for="">
+                    <span style="transition-delay:0ms ;">N</span>
+                    <span style="transition-delay:50ms ;">o</span>
+                    <span style="transition-delay:100ms ;">m</span>
+                    <span style="transition-delay:150ms ;">e</span>
+                </label>
+            </div>
+            <div class="form-desc">
+                <input type="text" required=""/>
+                <label for="">
+                    <span style="transition-delay:0ms ;">D</span>
+                    <span style="transition-delay:50ms ;">e</span>
+                    <span style="transition-delay:100ms ;">s</span>
+                    <span style="transition-delay:150ms ;">c</span>
+                    <span style="transition-delay:200ms ;">r</span>
+                    <span style="transition-delay:250ms ;">i</span>
+                    <span style="transition-delay:300ms ;">ç</span>
+                    <span style="transition-delay:350ms ;">ã</span>
+                    <span style="transition-delay:400ms ;">o</span>
+
+                </label>
+            </div>
+            <button type="button" class="btnCriar">Criar</button>
+            <div class="definePrioridade">
+                <p>Prioridade:</p>
+                <input type="radio" name="prioridade" value="alta">Alta
+                <input type="radio" name="prioridade" value="media">Media
+                <input type="radio" name="prioridade" value="baixa">Baixa
+            </div>
+                <button class="btnFecharModal" id="btnFecharModal">X</button>
+            </div>
+    </div>
     <footer>@rhuancruz.dev</footer>
     </div>
     

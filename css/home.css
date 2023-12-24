@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -31,6 +32,7 @@ aside{
 section{
     display: flex;
     align-items: center;
+    flex-direction: column;
     min-height: 100%;
     min-width: 100%;
     width: 190px;
@@ -39,6 +41,7 @@ section{
 }
 
 section.todas{
+    overflow-y: auto;
     border-radius: 8px;
     border: 1px solid rgba(255, 136, 0, 0.623);
 }
@@ -87,33 +90,54 @@ div.altaPrioridade-A{
     grid-row: 1;
     grid-column: 1;
     min-height: 100%;
-    min-width: 10%;
-    max-width: 80;
-    max-height: 0px;
+    min-width: 100%;
+    height: 10px;
     display: flex;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
     background-color: rgb(255, 255, 255);
-    overflow: auto;
     border: 2px solid #ff00004f;
 }
-.altaPrioridade-A::-webkit-scrollbar {
-    width: 10px; /* Largura da scrollbar */
+
+div.itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+    height: 90%;
+    gap: 1px;
+    background-color: transparent;
+    flex-direction: column;
+    overflow-y: auto;
+    border-top: 2px solid rgba(182, 174, 174, 0.445);
 }
 
-.altaPrioridade-A::-webkit-scrollbar-thumb {
-    background-color: #beb5b5; /* Cor do "pulgar" (a parte móvel da scrollbar) */
+.btnADD img{
+    height: 15px;
+    cursor: pointer;
+}
+
+
+.itens::-webkit-scrollbar {
+    width: 5px; /* Largura da scrollbar */
+}
+
+.itens::-webkit-scrollbar-thumb {
+    background-color: #c9c8c8; /* Cor do "pulgar" (a parte móvel da scrollbar) */
     border-radius: 6px; /* Borda arredondada */
 }
 
-.altaPrioridade-A::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Cor da "pista" (a parte fixa da scrollbar) */
+.itens::-webkit-scrollbar-track {
+    background-color: #f5f3f35e; /* Cor da "pista" (a parte fixa da scrollbar) */
 }
 
-.altaPrioridade-A::-webkit-scrollbar-thumb:hover {
+.itens::-webkit-scrollbar-thumb:hover {
     background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
 }
 
@@ -424,13 +448,13 @@ overflow: auto;
     display: flex;
     justify-content: center;
     align-self: center;
-    gap: 100px;
+    gap: 20px;
     flex-direction: column;
     
 }
 
 aside>div{
-    height: 50px;
+    height: 150px;
     min-width: min-content;
     font-size: 11px;
     display: flex;
@@ -441,16 +465,18 @@ aside>div{
 div.txtAltaprioridade{
     color: red;
     font-size: medium;
+    border-left: 1px solid red;
 }
 
 div.txtMediaprioridade{
     font-size: medium;
-
+    border-left: 1px solid yellow;
     color: rgb(255, 230, 0);
 }
 
 div.txtBaixaprioridade{
-    font-size: medium;
+    font-size: medium;    
+    border-left: 1px solid blue;
     color: rgb(0, 102, 255);
 }
 
@@ -462,16 +488,22 @@ footer{
     align-items: center;
 }
 
-div.teste{
+.teste{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 70%;
-    min-width: min-content;
-    width: 80%;
-    background-color: whitesmoke;
-    border: 10px;
-    box-shadow: 5px 5px 10px rgba(122, 122, 122, 0.5);
+    min-height:50px;
+    min-width: 90%;
+    font-size: medium;
+    padding-left: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-left: 8px solid red;
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    gap: 8px;
+    cursor: pointer;
 }
 
 .Todas::-webkit-scrollbar {
@@ -489,4 +521,146 @@ div.teste{
 
 .Todas::-webkit-scrollbar-thumb:hover {
     background-color: #797979c5; /* Cor do "pulgar" ao passar o mouse sobre ele */
+}
+
+.janela-modal{
+    color: white;
+    height: 100vh ;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.856);
+    backdrop-filter: blur(1px);
+    background-color: transparent;
+}
+
+.modal{
+    width: 60%;
+    min-width: 450px;
+    min-height: 350px;
+    background-color: rgba(12, 11, 11, 0.747);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+
+.form-nome{
+    position: relative;
+    width: 190px;
+}
+
+.form-nome input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-nome input:focus,
+.form-nome input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-nome label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+.form-nome label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-nome input:focus+label span,
+.form-nome input:valid+label span{
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+
+.form-desc{
+    position: relative;
+    width: 190px;
+}
+
+.form-desc input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-desc input:focus,
+.form-desc input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-desc label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+.form-desc label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-desc input:focus+label span,
+.form-desc input:valid+label span{
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+.btnCriar{
+    width: 100px;
+    height: 50px;
+    color: lightblue;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.definePrioridade{
+    display: flex;
+    gap: 5px;
+}
+
+.btnFecharModal{
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: red;
+    border: 0;
+    color: #f1f1f1;
 }
