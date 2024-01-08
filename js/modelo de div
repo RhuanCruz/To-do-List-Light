@@ -1,0 +1,4 @@
+<div class={PrioridadeAlta}><input type="checkbox">{NomeDaToDo}</div>
+<div class={PrioridadeMedia}><input type="checkbox">{NomeDaToDo}</div>
+<div class={PrioridadeBaixa}><input type="checkbox">{NomeDaToDo}</div>
+
